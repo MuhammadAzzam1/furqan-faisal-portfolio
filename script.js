@@ -120,7 +120,7 @@ const agentKnowledge = {
     links: [portfolioLinks.fleet]
   },
   services: {
-    patterns: ['services', 'service', 'what do you build', 'what can you build', 'what do you do', 'kia banate', 'kya banate', 'help my business', 'hire you', 'automation'],
+    patterns: ['services', 'service', 'offer', 'offering', 'provide', 'solutions', 'capabilities', 'what do you offer', 'what can you offer', 'what do you provide', 'what can you provide', 'what do you build', 'what can you build', 'what do you do', 'kia offer karte', 'kya offer karte', 'kia provide karte', 'kya provide karte', 'kia banate', 'kya banate', 'help my business', 'hire you', 'automation'],
     text: 'Furqan builds AI agents, RAG knowledge assistants, workflow automation, secure FastAPI backends, PostgreSQL systems, business dashboards, and integrations that use controlled tools instead of guessing.',
     links: [portfolioLinks.email, portfolioLinks.fiverr]
   },
