@@ -1,5 +1,5 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const fiverrUrl = 'https://www.fiverr.com/sellers/muhammadazzam20';
+const fiverrUrl = 'https://www.fiverr.com/muhammadazzam20';
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
