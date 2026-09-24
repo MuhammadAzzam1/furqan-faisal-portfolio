@@ -199,6 +199,39 @@
       <div class="footer-signoff"><b>FURQAN FAISAL</b><span>AI driven systems · © <span id="year"></span></span></div>
     </footer>
 
+    <section class="portfolio-agent" aria-label="Furqan's portfolio assistant">
+      <div id="agent-panel" class="agent-panel" aria-hidden="true">
+        <header class="agent-panel-head">
+          <div class="agent-identity">
+            <span class="agent-mark" aria-hidden="true">✦</span>
+            <div><strong>Furqan AI</strong><small><i></i> Portfolio assistant</small></div>
+          </div>
+          <button id="agent-close" class="agent-close" type="button" aria-label="Close portfolio assistant">×</button>
+        </header>
+        <div id="agent-messages" class="agent-messages" aria-live="polite">
+          <div class="agent-message assistant-message">
+            <span class="message-label">Furqan AI</span>
+            <p>Hi! Ask me about Furqan’s projects, AI services, technical skills, or availability.</p>
+          </div>
+        </div>
+        <div class="agent-suggestions" aria-label="Suggested questions">
+          <button type="button" data-question="What projects has Furqan built?">Selected projects</button>
+          <button type="button" data-question="What AI services can Furqan provide?">AI services</button>
+          <button type="button" data-question="What is Furqan's tech stack?">Tech stack</button>
+        </div>
+        <form id="agent-form" class="agent-form">
+          <label class="sr-only" for="agent-input">Ask about Furqan's work</label>
+          <input id="agent-input" type="text" maxlength="240" autocomplete="off" placeholder="Ask about Furqan’s work…" />
+          <button type="submit" aria-label="Send message">↗</button>
+        </form>
+        <p class="agent-note">Grounded in this portfolio · No invented answers</p>
+      </div>
+      <button id="agent-toggle" class="agent-toggle" type="button" aria-expanded="false" aria-controls="agent-panel">
+        <span class="agent-toggle-icon" aria-hidden="true">✦</span>
+        <span><b>Ask Furqan AI</b><small>Projects · skills · services</small></span>
+      </button>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
