@@ -1,6 +1,15 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fiverrUrl = 'https://www.fiverr.com/muhammadazzam20';
 
+const exploreWorkLink = document.querySelector('#explore-work');
+exploreWorkLink?.addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('#work')?.scrollIntoView({
+    behavior: reduceMotion ? 'auto' : 'smooth',
+    block: 'start'
+  });
+});
+
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 if (fiverrUrl) {
