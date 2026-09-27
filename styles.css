@@ -210,3 +210,15 @@ nav a:hover { color: white; background: rgba(255,255,255,.08); }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }.hero-line { transform: none; }
 }
+
+
+/* Keep the portfolio assistant within the visible mobile viewport. */
+@media (max-width: 600px) {
+  .portfolio-agent { left: 10px; right: 10px; bottom: max(10px, env(safe-area-inset-bottom)); align-items: stretch; }
+  .agent-toggle { min-width: 0; height: 56px; padding-right: 13px; align-self: flex-end; }
+  .agent-panel { width: 100%; min-width: 0; height: min(610px, calc(100vh - 20px)); height: min(610px, calc(100dvh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom))); max-height: calc(100dvh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); border-radius: 21px; }
+  .agent-messages { padding: 17px 13px; }
+  .agent-suggestions { padding-inline: 13px; }
+  .agent-message { max-width: 92%; }
+}
+
