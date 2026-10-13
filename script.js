@@ -110,7 +110,7 @@ const portfolioLinks = {
 const agentKnowledge = {
   projects: {
     patterns: ['projects', 'project', 'portfolio', 'work samples', 'kya banaya', 'kia banaya', 'kaam dikhao', 'your work'],
-    text: 'Furqan has built three deployed AI systems: Food Mood, an AI-assisted ordering platform; Velora Assist, a tool-grounded commerce support agent; and FleetFix AI, a RAG technical-support portal.',
+    text: 'M.azzam has built three deployed AI systems: Food Mood, an AI-assisted ordering platform; Velora Assist, a tool-grounded commerce support agent; and FleetFix AI, a RAG technical-support portal.',
     links: [portfolioLinks.food, portfolioLinks.velora, portfolioLinks.fleet]
   },
   food: {
@@ -130,17 +130,17 @@ const agentKnowledge = {
   },
   services: {
     patterns: ['services', 'service', 'offer', 'offering', 'provide', 'solutions', 'capabilities', 'what do you offer', 'what can you offer', 'what do you provide', 'what can you provide', 'what do you build', 'what can you build', 'what do you do', 'kia offer karte', 'kya offer karte', 'kia provide karte', 'kya provide karte', 'kia banate', 'kya banate', 'help my business', 'hire you', 'automation'],
-    text: 'Furqan builds AI agents, RAG knowledge assistants, workflow automation, secure FastAPI backends, PostgreSQL systems, business dashboards, and integrations that use controlled tools instead of guessing.',
+    text: 'M.azzam builds AI agents, RAG knowledge assistants, workflow automation, secure FastAPI backends, PostgreSQL systems, business dashboards, and integrations that use controlled tools instead of guessing.',
     links: [portfolioLinks.email, portfolioLinks.fiverr]
   },
   agents: {
     patterns: ['ai agent', 'agents', 'chatbot', 'tool calling', 'multi agent', 'multi-agent'],
-    text: 'Furqan builds custom AI agents that understand user intent, retrieve verified information, call approved business tools, keep audit trails, and hand conversations to a person when confidence or permissions are insufficient.',
+    text: 'M.azzam builds custom AI agents that understand user intent, retrieve verified information, call approved business tools, keep audit trails, and hand conversations to a person when confidence or permissions are insufficient.',
     links: [portfolioLinks.fiverr]
   },
   rag: {
     patterns: ['rag', 'vector database', 'vector db', 'embeddings', 'knowledge base', 'documents'],
-    text: 'Furqan builds RAG assistants using document chunking, embeddings, vector retrieval, grounded responses, citations, confidence checks, and human escalation. The language model explains retrieved evidence; it is not treated as the source of truth.',
+    text: 'M.azzam builds RAG assistants using document chunking, embeddings, vector retrieval, grounded responses, citations, confidence checks, and human escalation. The language model explains retrieved evidence; it is not treated as the source of truth.',
     links: [portfolioLinks.fleet]
   },
   stack: {
@@ -150,41 +150,41 @@ const agentKnowledge = {
   },
   deployment: {
     patterns: ['deploy', 'deployment', 'hosting', 'production', 'cloud'],
-    text: 'Furqan can take a scoped AI application from backend and database design through integration, testing, Git-based delivery, and cloud deployment. Hosting and third-party service costs are agreed separately for client work.',
+    text: 'M.azzam can take a scoped AI application from backend and database design through integration, testing, Git-based delivery, and cloud deployment. Hosting and third-party service costs are agreed separately for client work.',
     links: [portfolioLinks.email]
   },
   about: {
-    patterns: ['who is furqan', 'about furqan', 'about you', 'your experience', 'introduction', 'bio', 'who are you'],
-    text: 'Furqan Faisal is an Applied AI and Backend Developer based in Karachi. He focuses on complete AI-driven business systems that combine agents, retrieval, secure APIs, databases, dashboards, and human oversight.',
+    patterns: ['who is m.azzam', 'about m.azzam', 'about you', 'your experience', 'introduction', 'bio', 'who are you'],
+    text: 'M.azzam sharif is an Applied AI and Backend Developer based in Karachi. He focuses on complete AI-driven business systems that combine agents, retrieval, secure APIs, databases, dashboards, and human oversight.',
     links: []
   },
   location: {
     patterns: ['location', 'where are you', 'based', 'karachi', 'pakistan'],
-    text: 'Furqan is based in Karachi, Pakistan, and is open to remote projects and suitable learning or work opportunities.',
+    text: 'M.azzam is based in Karachi, Pakistan, and is open to remote projects and suitable learning or work opportunities.',
     links: [portfolioLinks.email]
   },
   contact: {
-    patterns: ['contact', 'email', 'fiverr', 'reach', 'talk to furqan', 'message', 'available', 'availability', 'collaborate'],
-    text: 'You can contact Furqan directly by email or through Fiverr. Share the business problem, required integrations, expected users, and target timeline for a focused response.',
+    patterns: ['contact', 'email', 'fiverr', 'reach', 'talk to m.azzam', 'message', 'available', 'availability', 'collaborate'],
+    text: 'You can contact M.azzam directly by email or through Fiverr. Share the business problem, required integrations, expected users, and target timeline for a focused response.',
     links: [portfolioLinks.email, portfolioLinks.fiverr]
   },
   website: {
     patterns: ['website', 'web app', 'dashboard', 'ordering system', 'business system', 'backend'],
-    text: 'Furqan develops database-backed business applications, ordering systems, dashboards, and secure backend APIs, and can integrate AI agents into those systems. The focus is complete functional products rather than design-only pages.',
+    text: 'M.azzam develops database-backed business applications, ordering systems, dashboards, and secure backend APIs, and can integrate AI agents into those systems. The focus is complete functional products rather than design-only pages.',
     links: [portfolioLinks.food, portfolioLinks.email]
   }
 };
 
 const normalizeQuestion = (value) => value.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
 const contactFallback = {
-  text: 'I do not have verified portfolio information for that question, so I will not guess. Please contact Furqan directly for an accurate answer.',
+  text: 'I do not have verified portfolio information for that question, so I will not guess. Please contact M.azzam directly for an accurate answer.',
   links: [portfolioLinks.email, portfolioLinks.fiverr]
 };
 
 function findAgentAnswer(question) {
   const normalized = normalizeQuestion(question);
   if (/^(hi|hello|hey|salam|assalam|aoa)\b/.test(normalized) && normalized.split(' ').length <= 5) {
-    return { text: 'Hi! I can answer questions about Furqan’s projects, AI services, technical stack, deployment experience, and availability.', links: [] };
+    return { text: 'Hi! I can answer questions about M.azzam’s projects, AI services, technical stack, deployment experience, and availability.', links: [] };
   }
   if (/^(tell me more|more details|aur batao|mazeed batao|explain more)$/.test(normalized) && lastAgentTopic && agentKnowledge[lastAgentTopic]) {
     return agentKnowledge[lastAgentTopic];
@@ -208,7 +208,7 @@ function addAgentMessage(role, text, links = []) {
   message.className = `agent-message ${role === 'user' ? 'user-message' : 'assistant-message'}`;
   const label = document.createElement('span');
   label.className = 'message-label';
-  label.textContent = role === 'user' ? 'You' : 'Furqan AI';
+  label.textContent = role === 'user' ? 'You' : 'M.azzam AI';
   const copy = document.createElement('p');
   copy.textContent = text;
   message.append(label, copy);
@@ -234,7 +234,7 @@ function addAgentMessage(role, text, links = []) {
 function showTypingIndicator() {
   const typing = document.createElement('div');
   typing.className = 'agent-message assistant-message typing-message';
-  typing.setAttribute('aria-label', 'Furqan AI is responding');
+  typing.setAttribute('aria-label', 'M.azzam AI is responding');
   typing.innerHTML = '<i></i><i></i><i></i>';
   agentMessages.appendChild(typing);
   agentMessages.scrollTop = agentMessages.scrollHeight;

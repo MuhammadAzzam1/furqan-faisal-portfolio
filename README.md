@@ -1,4 +1,4 @@
-# Furqan Faisal Portfolio
+# M.azzam sharif Portfolio
 
 Premium, responsive portfolio for an AI-driven systems and backend developer.
 
@@ -12,4 +12,4 @@ Paste the public Fiverr profile URL into `fiverrUrl` at the top of `script.js`. 
 
 ## Deploy
 
-Deploy the `furqan-portfolio` folder as a static Vercel project with no build command.
+Deploy this folder as a static Vercel project with no build command.
