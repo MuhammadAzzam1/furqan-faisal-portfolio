@@ -154,7 +154,7 @@ const agentKnowledge = {
     links: [portfolioLinks.email]
   },
   about: {
-    patterns: ['who is m.azzam', 'about m.azzam', 'about you', 'your experience', 'introduction', 'bio', 'who are you'],
+    patterns: ['who is m azzam', 'about m azzam', 'about you', 'your experience', 'introduction', 'bio', 'who are you'],
     text: 'M.azzam sharif is an Applied AI and Backend Developer based in Karachi. He focuses on complete AI-driven business systems that combine agents, retrieval, secure APIs, databases, dashboards, and human oversight.',
     links: []
   },
@@ -164,7 +164,7 @@ const agentKnowledge = {
     links: [portfolioLinks.email]
   },
   contact: {
-    patterns: ['contact', 'email', 'fiverr', 'reach', 'talk to m.azzam', 'message', 'available', 'availability', 'collaborate'],
+    patterns: ['contact', 'email', 'fiverr', 'reach', 'talk to m azzam', 'message', 'available', 'availability', 'collaborate'],
     text: 'You can contact M.azzam directly by email or through Fiverr. Share the business problem, required integrations, expected users, and target timeline for a focused response.',
     links: [portfolioLinks.email, portfolioLinks.fiverr]
   },
@@ -176,6 +176,7 @@ const agentKnowledge = {
 };
 
 const normalizeQuestion = (value) => value.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+const isAboutMazzam = (question) => /\bm\s+azzam(?:\s+sharif)?\b/.test(normalizeQuestion(question));
 const contactFallback = {
   text: 'I do not have verified portfolio information for that question, so I will not guess. Please contact M.azzam directly for an accurate answer.',
   links: [portfolioLinks.email, portfolioLinks.fiverr]
@@ -183,6 +184,12 @@ const contactFallback = {
 
 function findAgentAnswer(question) {
   const normalized = normalizeQuestion(question);
+  if (!isAboutMazzam(question)) {
+    return {
+      text: 'I can answer questions about M. Azzam Sharif’s portfolio and work. Please include his name in your question.',
+      links: []
+    };
+  }
   if (/^(hi|hello|hey|salam|assalam|aoa)\b/.test(normalized) && normalized.split(' ').length <= 5) {
     return { text: 'Hi! I can answer questions about M.azzam’s projects, AI services, technical stack, deployment experience, and availability.', links: [] };
   }
@@ -273,3 +280,4 @@ document.querySelectorAll('[data-question]').forEach((button) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && portfolioAgent.classList.contains('open')) setAgentOpen(false);
 });
+
