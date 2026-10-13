@@ -176,7 +176,7 @@ const agentKnowledge = {
 };
 
 const normalizeQuestion = (value) => value.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
-const isAboutMazzam = (question) => /\bm\s+azzam(?:\s+sharif)?\b/.test(normalizeQuestion(question));
+const isAboutMazzam = (question) => /\b(?:m\s+)?azzam(?:\s+sharif)?\b/.test(normalizeQuestion(question));
 const contactFallback = {
   text: 'I do not have verified portfolio information for that question, so I will not guess. Please contact M.azzam directly for an accurate answer.',
   links: [portfolioLinks.email, portfolioLinks.fiverr]
